@@ -45,13 +45,89 @@ body {
   margin: 1em;
 }
 
+
+.titulo {
+  color: #FFF;
+  font-size: 1.1em !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.teste__item:hover .titulo {
+  transform: scale(1);
+  transition-delay: 0.25s;
+}
+
+
+
 .cabecalho__logos {
-  color: var(--branco);
   grid-column: 2 / 3;
+  display: flex;
   margin: 0 0 0 2em;
   
 }
+/* TESTEEEEEAAAAAAAAAAAAAAAAAAAAA */
+.social__menu {
+  margin: 1em;
+}
 
+.social__menu ul {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  padding: 0;
+  margin: 0;
+  transform: translate(-50%, -50%);
+}
+
+.social__menu ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.social__menu ul li .fab, .social__menu ul li .far {
+  font-size: 30px;
+  line-height: 60px;
+  transition: .3s;
+  color: #FFF;
+}
+
+.social__menu ul li .fab:hover, .social__menu ul li .far:hover {
+  color: var(--azul-claro);
+}
+
+
+
+.social__menu ul li a {
+  color: #FFF;
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  transition: .3s;
+  border-radius: 50%;
+  background: #024059;
+  box-shadow:  9px -9px 13px #023449,
+             -9px 9px 13px #024c69;
+}
+
+.social__menu ul li a:hover {
+  transform: translate(0, -10%);
+  border-radius: 50%;
+  border-radius: 50%;
+background: #c7c7c7;
+box-shadow: inset 9px -9px 13px #b8b8b8,
+            inset -9px 9px 13px #ffffff;
+
+}
+
+
+
+/* TESTEEEEEAAAAAAAAAAAAAAAAAAAAA */
 .cabecalho__logos img{
   transition: .2s;
 }
@@ -95,14 +171,13 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 1em;
-
 }
 
 .experiencias__data {
   font-size: 20px;
-  background-color: var(--verde-claro);
+  background: var(--verde-claro);
   padding: .5em;
+  margin: 0;
 
 }
 
@@ -119,8 +194,7 @@ body {
 }
 
 .experiencias__empresas {
-  margin: .5em 0;
-  padding: 0 .5em .5em .5em;
+  padding-bottom: 1em;
 }
 
 .cursos__titulo-html {
@@ -153,6 +227,8 @@ body {
   margin: 1em;
 }
 
+
+
 .certificados {
   background-color: var(--aul-escuro);
   text-align: center;
@@ -178,20 +254,31 @@ body {
   }
 
   .nome {
+    font-size: 24px;
     text-align: center;
   }
 
   .informacoes {
+    font-size: 20px;
     text-align: center;
   }
 
   .cabecalho__logos {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     margin: auto
   }
 
   .experiencias, .sobre, .cursos{
     width: 90vw;
+  }
+
+  .cabecalho__logos a img{
+    margin: .5em;
+  }
+
+  .certificados {
+    font-size: 18px;
   }
 }
